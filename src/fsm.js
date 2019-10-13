@@ -7,7 +7,6 @@ class FSM {
         this.initial = config.initial;
         this.currState = config.initial;
         this.states = config.states;
-        this.start = config.initial;
         this.story = [];
         this.undoStory = [];
     }
@@ -51,8 +50,7 @@ class FSM {
      * Resets FSM state to initial.
      */
     reset() {
-        this.initial = this.start;
-        this.currState = this.start;
+        this.currState = this.initial;
     }
 
     /**
